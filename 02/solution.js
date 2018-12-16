@@ -4,10 +4,8 @@ const fs = require('fs');
 fs.readFile('input.txt', 'utf8', (err, data) => {
   if (err) throw err;
 
-  const occurences = data.split('\n')
+  const result = data.split('\n')
     .map(line => appearsTwiceOrThrice(line))
-
-  const result = occurences
     .reduce((acc, occurences) => ({
       two: occurences.two ? acc.two + 1 : acc.two,
       three: occurences.three ? acc.three + 1 : acc.three
@@ -16,7 +14,7 @@ fs.readFile('input.txt', 'utf8', (err, data) => {
       three: 0
     });
 
-  console.log(result.two * result.three)
+  console.log(result.two * result.three);
 });
 
 const appearsTwiceOrThrice = (line) => {
@@ -28,7 +26,7 @@ const appearsTwiceOrThrice = (line) => {
   }), {
     two: false,
     three: false
-  })
+  });
 };
 
 const countOccurences = (line) => line.split('')
