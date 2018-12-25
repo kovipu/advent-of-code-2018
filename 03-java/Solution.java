@@ -25,7 +25,7 @@ public class Solution {
                 line = reader.readLine();
             }
 
-            // count the nuber of collissions
+            // count the number of collissions
             int collissions = 0;
             for (int x = 0; x < 1500; x++) {
                 for (int y = 0; y < 1500; y++) {
@@ -34,7 +34,7 @@ public class Solution {
             }
 
             System.out.println(collissions);
-    } catch (IOException e) {
+        } catch (IOException e) {
             e.printStackTrace();
         }
     }
